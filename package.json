@@ -1,0 +1,27 @@
+{
+  "name": "lafabelo-com",
+  "version": "0.1.0",
+  "description": "Website source lafabelo.com",
+  "private": true,
+  "license": "UNLICENSED",
+  "author": "Stanislav Dzisiak <stanislav.dzisiak@outlook.com>",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corsicanec82/lafabelo-com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/corsicanec82/lafabelo-com/issues"
+  },
+  "homepage": "https://github.com/corsicanec82/lafabelo-com#readme",
+  "dependencies": {
+    "next": "^10.0.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
