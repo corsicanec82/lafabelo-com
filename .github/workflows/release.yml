@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-16.04
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: main
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
