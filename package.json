@@ -6,7 +6,7 @@
   "license": "UNLICENSED",
   "author": "Stanislav Dzisiak <stanislav.dzisiak@outlook.com>",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No tests found\" && exit 0",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/corsicanec82/lafabelo-com#readme",
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "next": "^10.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"

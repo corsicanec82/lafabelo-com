@@ -9,3 +9,10 @@ extends:
 env:
   browser: true
   node: true
+
+rules:
+  react/react-in-jsx-scope: 0
+  react/prop-types: 0
+  react/jsx-props-no-spreading:
+    - error
+    - custom: ignore
