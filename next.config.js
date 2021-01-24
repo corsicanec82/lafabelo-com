@@ -4,4 +4,6 @@ module.exports = {
     defaultLocale: 'de',
     localeDetection: false,
   },
+  // for netlify plugin
+  target: 'serverless',
 };
