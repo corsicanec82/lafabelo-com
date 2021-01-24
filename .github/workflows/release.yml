@@ -24,3 +24,5 @@ jobs:
         run: make lint
       - name: Push to release
         run: git push -f origin main:release
+      - name: Deploy
+        run: curl -X POST -d {} ${{ secrets.DEPLOY_WEBHOOK_URL }}
