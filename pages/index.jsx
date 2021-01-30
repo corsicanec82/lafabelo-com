@@ -1,19 +1,18 @@
-/* eslint-disable arrow-body-style */
+import { useRouter } from 'next/router';
 
-import Logo from '../components/Header/Logo';
-// import { useRouter } from 'next/router';
+import Header from '../components/Header/Header';
 
 const HomePage = () => {
+  const { locale } = useRouter();
+
   return (
-    <header id="header" className="fixed-top">
-      <div className="container d-flex align-items-center">
-        <Logo />
-        {/* <Menu items={menu} />
-        <Socials socials={socials} />
-        <Languages />
-        <Cart /> */}
-      </div>
-    </header>
+    <>
+      <Header />
+      <br />
+      <br />
+      <br />
+      {locale}
+    </>
   );
 };
 

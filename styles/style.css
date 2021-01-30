@@ -183,7 +183,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #1bbd36;
 }
 
-.nav-menu .drop-down > a:after {
+.nav-menu .drop-down > a:after, .nav-menu .drop-down > span:after {
   content: "\ea99";
   font-family: IcoFont;
   padding-left: 5px;
@@ -410,8 +410,17 @@ h1, h2, h3, h4, h5, h6 {
 # Header Languages
 --------------------------------------------------------------*/
 
-.header-langs a {
+.header-langs a, .header-langs span {
   color: #a0a0a0;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+.header-langs span:hover {
+  color: #2ae149;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .header-langs .drop-down {
@@ -419,11 +428,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-langs .drop-down ul {
-  left: 8px;
+  left: 2px;
 }
 
 .header-langs .drop-down li {
   min-width: 0;
+}
+
+@media (max-width: 1366px) {
+  .nav-menu .drop-down ul {
+    left: -2px;
+  }
 }
 
 /*--------------------------------------------------------------
