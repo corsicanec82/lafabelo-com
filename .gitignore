@@ -2,3 +2,5 @@ node_modules/
 .next/
 .netlify/
 out/
+.env
+.env.local
