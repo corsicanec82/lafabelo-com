@@ -1,14 +1,16 @@
 import { useRouter } from 'next/router';
+import _ from 'lodash';
 
-import Header from '../components/Header/Header.jsx';
 import { getClient } from '../lib/api.js';
+import Header from '../components/Header/Header.jsx';
 
-const HomePage = ({ data }) => {
+const HomePage = ({ content }) => {
+  // eslint-disable-next-line
   const { locale } = useRouter();
 
   return (
     <>
-      <Header />
+      <Header content={content} />
     </>
   );
 };
@@ -19,8 +21,8 @@ export const getStaticProps = async ({ locale }) => {
 
   return {
     props: {
-      data: {
-        menu: menu.data,
+      content: {
+        menu: _.get(menu, 'data', null),
       },
     },
   };
