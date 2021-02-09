@@ -1,4 +1,4 @@
-import LinkTo from '../LinkTo';
+import LinkTo from '../LinkTo.jsx';
 
 const Logo = () => (
   <h1 className="logo mr-auto">

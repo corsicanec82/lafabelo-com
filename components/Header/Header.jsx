@@ -1,5 +1,5 @@
-import Logo from './Logo';
-import SelectLanguage from './SelectLanguage';
+import Logo from './Logo.jsx';
+import SelectLanguage from './SelectLanguage.jsx';
 
 const Header = () => (
   <header id="header" className="fixed-top">
