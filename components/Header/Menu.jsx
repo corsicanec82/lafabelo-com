@@ -1,13 +1,22 @@
 import _ from 'lodash';
+import { useRouter } from 'next/router';
+import path from 'path';
 
 import { getMenuItems } from '../../lib/utils.js';
 import LinkTo from '../LinkTo.jsx';
 
 const Item = ({ name, link, items }) => {
+  const { locale, pathname } = useRouter();
+
   if (items) {
     return (
       <li key={link} className="drop-down">
-        <LinkTo href={link}>{name}</LinkTo>
+        <a
+          href={path.join(pathname, locale, link)}
+          onClick={(e) => { e.preventDefault(); }}
+        >
+          {name}
+        </a>
         <ul>
           {items.map(Item)}
         </ul>
