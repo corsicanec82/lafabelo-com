@@ -10,6 +10,10 @@ const SelectLanguage = () => {
     e.preventDefault();
     Cookies.set('NEXT_LOCALE', locale);
     router.push(pathname, pathname, { locale });
+
+    // change language for snipcart
+    const { Snipcart } = window;
+    Snipcart.api.session.setLanguage(locale);
   };
 
   return (
