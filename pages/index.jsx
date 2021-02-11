@@ -18,11 +18,13 @@ const HomePage = ({ content }) => {
 export const getStaticProps = async ({ locale }) => {
   const client = getClient();
   const menu = await client.getSingle('menu', { lang: locale });
+  const socials = await client.getSingle('socials', { lang: locale });
 
   return {
     props: {
       content: {
         menu: _.get(menu, 'data', null),
+        socials: _.get(socials, 'data', null),
       },
     },
   };

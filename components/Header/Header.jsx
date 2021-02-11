@@ -2,6 +2,7 @@ import Logo from './Logo.jsx';
 import SelectLanguage from './SelectLanguage.jsx';
 import Menu from './Menu.jsx';
 import MenuMobile from './MenuMobile.jsx';
+import Socials from './Socials.jsx';
 
 const Header = ({ content }) => (
   <>
@@ -12,6 +13,7 @@ const Header = ({ content }) => (
         <Logo />
         <Menu data={content.menu} />
         <SelectLanguage />
+        <Socials data={content.socials} />
       </div>
     </header>
   </>
