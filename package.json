@@ -1,6 +1,6 @@
 {
   "name": "lafabelo-com",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Website source lafabelo.com",
   "private": true,
   "license": "UNLICENSED",
@@ -10,6 +10,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -H 0.0.0.0 -p ${PORT:-8080}"
+  },
+  "engines": {
+    "node": "14.15.5"
   },
   "repository": {
     "type": "git",

@@ -3,6 +3,4 @@ module.exports = {
     locales: ['ru', 'ua', 'de'],
     defaultLocale: 'de',
   },
-  // for netlify plugin
-  // target: 'experimental-serverless-trace',
 };
