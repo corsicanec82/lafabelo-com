@@ -4,5 +4,5 @@ module.exports = {
     defaultLocale: 'de',
   },
   // for netlify plugin
-  target: 'experimental-serverless-trace',
+  // target: 'experimental-serverless-trace',
 };
