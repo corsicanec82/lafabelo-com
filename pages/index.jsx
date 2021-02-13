@@ -27,6 +27,7 @@ export const getStaticProps = async ({ locale }) => {
   const copyright = await client.getSingle('copyright', { lang: locale });
   const company = await client.getSingle('company', { lang: locale });
   const usefulLinks = await client.getByUID('links_list', 'useful_links', { lang: locale });
+  const ourProducts = await client.getByUID('links_list', 'our_products', { lang: locale });
 
   return {
     props: {
@@ -36,6 +37,7 @@ export const getStaticProps = async ({ locale }) => {
         copyright: getData(copyright),
         company: getData(company),
         usefulLinks: getData(usefulLinks),
+        ourProducts: getData(ourProducts),
       },
     },
   };

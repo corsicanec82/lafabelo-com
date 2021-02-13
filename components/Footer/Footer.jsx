@@ -9,7 +9,7 @@ const Footer = ({ content }) => (
         <div className="row">
           <Company data={content.company} />
           <LinksList className="col-lg-2 col-md-6 footer-links" data={content.usefulLinks} />
-          {/* <LinksList className="col-lg-3 col-md-6 footer-links" listName={data.our_products_text} list={data.our_products} /> */}
+          <LinksList className="col-lg-3 col-md-6 footer-links" data={content.ourProducts} />
           {/* <Subscribe data={data.subscribe} /> */}
         </div>
       </div>
