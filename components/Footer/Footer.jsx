@@ -1,4 +1,6 @@
-const Footer = ({ data, socials }) => (
+import Copyright from './Copyright.jsx';
+
+const Footer = ({ content }) => (
   <footer id="footer">
     <div className="footer-top">
       <div className="container">
@@ -13,9 +15,8 @@ const Footer = ({ data, socials }) => (
     </div>
 
     <div className="container d-md-flex py-4">
-      sss
-      {/* <Copyright copyright={data.copyright} credits={data.credits} />
-      <Socials socials={socials} /> */}
+      <Copyright data={content.copyright} />
+      {/* <Socials socials={socials} /> */}
     </div>
   </footer>
 );
