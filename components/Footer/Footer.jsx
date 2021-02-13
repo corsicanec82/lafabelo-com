@@ -2,6 +2,7 @@ import Copyright from './Copyright.jsx';
 import Company from './Company.jsx';
 import LinksList from './LinksList.jsx';
 import Subscribe from './Subscribe.jsx';
+import Socials from './Socials.jsx';
 
 const Footer = ({ content }) => (
   <footer id="footer">
@@ -18,7 +19,7 @@ const Footer = ({ content }) => (
 
     <div className="container d-md-flex py-4">
       <Copyright data={content.copyright} />
-      {/* <Socials socials={socials} /> */}
+      <Socials data={content.socials} />
     </div>
   </footer>
 );
