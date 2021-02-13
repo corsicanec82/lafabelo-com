@@ -1,5 +1,6 @@
 import Copyright from './Copyright.jsx';
 import Company from './Company.jsx';
+import LinksList from './LinksList.jsx';
 
 const Footer = ({ content }) => (
   <footer id="footer">
@@ -7,9 +8,9 @@ const Footer = ({ content }) => (
       <div className="container">
         <div className="row">
           <Company data={content.company} />
-          {/* <LinksList className="col-lg-2 col-md-6 footer-links" listName={data.useful_links_text} list={data.useful_links} />
-          <LinksList className="col-lg-3 col-md-6 footer-links" listName={data.our_products_text} list={data.our_products} />
-          <Subscribe data={data.subscribe} /> */}
+          <LinksList className="col-lg-2 col-md-6 footer-links" data={content.usefulLinks} />
+          {/* <LinksList className="col-lg-3 col-md-6 footer-links" listName={data.our_products_text} list={data.our_products} /> */}
+          {/* <Subscribe data={data.subscribe} /> */}
         </div>
       </div>
     </div>
