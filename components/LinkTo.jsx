@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 
-const LinkTo = ({ children, ...props }) => (
+const LinkTo = ({ children, className, ...props }) => (
   <Link {...props}>
-    <a>{children}</a>
+    <a className={className}>{children}</a>
   </Link>
 );
 

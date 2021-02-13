@@ -1,46 +1,36 @@
-import { useRouter } from 'next/router';
-
 import { getClient } from '../lib/api.js';
-import { getData } from '../lib/utils.js';
+import { getData, getSlice } from '../lib/utils.js';
+import { queryBaseData } from '../lib/queries.js';
 import Header from '../components/Header/Header.jsx';
 import Footer from '../components/Footer/Footer.jsx';
+import Content from '../components/Content';
+import Carousel from '../components/Carousel.jsx';
 
-const HomePage = ({ content }) => {
-  // NOTE: this line is not needed
-  // eslint-disable-next-line
-  const { locale } = useRouter();
-
-  return (
-    <>
-      <Header content={content} />
-      <div className="flex-grow-1">
-        body
-      </div>
-      <Footer content={content} />
-    </>
-  );
-};
+const HomePage = ({ data }) => (
+  <>
+    <Header data={data} />
+    <Content>
+      <Carousel items={getSlice(data.page, 'carousel').items} />
+    </Content>
+    <Footer data={data} />
+  </>
+);
 
 export const getStaticProps = async ({ locale }) => {
   const client = getClient();
-  const menu = await client.getSingle('menu', { lang: locale });
-  const socials = await client.getSingle('socials', { lang: locale });
-  const copyright = await client.getSingle('copyright', { lang: locale });
-  const company = await client.getSingle('company', { lang: locale });
-  const usefulLinks = await client.getByUID('links_list', 'useful_links', { lang: locale });
-  const ourProducts = await client.getByUID('links_list', 'our_products', { lang: locale });
-  const subscribe = await client.getSingle('subscribe', { lang: locale });
+
+  const page = await client.getSingle('homepage', { lang: locale });
+  if (!page) {
+    return { notFound: true };
+  }
+
+  const baseData = await queryBaseData(client, locale);
 
   return {
     props: {
-      content: {
-        menu: getData(menu),
-        socials: getData(socials),
-        copyright: getData(copyright),
-        company: getData(company),
-        usefulLinks: getData(usefulLinks),
-        ourProducts: getData(ourProducts),
-        subscribe: getData(subscribe),
+      data: {
+        ...baseData,
+        page: getData(page),
       },
     },
   };

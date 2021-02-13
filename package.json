@@ -1,6 +1,6 @@
 {
   "name": "lafabelo-com",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Website source lafabelo.com",
   "private": true,
   "license": "UNLICENSED",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/corsicanec82/lafabelo-com#readme",
   "dependencies": {
+    "aos": "^2.3.4",
     "bootstrap": "^4.6.0",
     "classnames": "^2.2.6",
     "js-cookie": "^2.2.1",
