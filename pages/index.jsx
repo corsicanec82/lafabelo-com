@@ -6,6 +6,7 @@ import Header from '../components/Header/Header.jsx';
 import Footer from '../components/Footer/Footer.jsx';
 
 const HomePage = ({ content }) => {
+  // NOTE: this line is not needed
   // eslint-disable-next-line
   const { locale } = useRouter();
 
@@ -28,6 +29,7 @@ export const getStaticProps = async ({ locale }) => {
   const company = await client.getSingle('company', { lang: locale });
   const usefulLinks = await client.getByUID('links_list', 'useful_links', { lang: locale });
   const ourProducts = await client.getByUID('links_list', 'our_products', { lang: locale });
+  const subscribe = await client.getSingle('subscribe', { lang: locale });
 
   return {
     props: {
@@ -38,6 +40,7 @@ export const getStaticProps = async ({ locale }) => {
         company: getData(company),
         usefulLinks: getData(usefulLinks),
         ourProducts: getData(ourProducts),
+        subscribe: getData(subscribe),
       },
     },
   };

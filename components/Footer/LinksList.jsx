@@ -10,7 +10,7 @@ const LinksList = ({ className, data }) => {
 
   return (
     <div className={className}>
-      <h4>{RichText.asText(data.display_title)}</h4>
+      <h4>{RichText.asText(data.title)}</h4>
       <ul>
         {data.items.map(({ name, link }) => (
           <li key={RichText.asText(link)}>

@@ -1,6 +1,7 @@
 import Copyright from './Copyright.jsx';
 import Company from './Company.jsx';
 import LinksList from './LinksList.jsx';
+import Subscribe from './Subscribe.jsx';
 
 const Footer = ({ content }) => (
   <footer id="footer">
@@ -10,7 +11,7 @@ const Footer = ({ content }) => (
           <Company data={content.company} />
           <LinksList className="col-lg-2 col-md-6 footer-links" data={content.usefulLinks} />
           <LinksList className="col-lg-3 col-md-6 footer-links" data={content.ourProducts} />
-          {/* <Subscribe data={data.subscribe} /> */}
+          <Subscribe data={content.subscribe} />
         </div>
       </div>
     </div>
