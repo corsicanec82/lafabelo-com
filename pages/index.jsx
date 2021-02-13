@@ -3,6 +3,7 @@ import _ from 'lodash';
 
 import { getClient } from '../lib/api.js';
 import Header from '../components/Header/Header.jsx';
+import Footer from '../components/Footer/Footer.jsx';
 
 const HomePage = ({ content }) => {
   // eslint-disable-next-line
@@ -11,6 +12,10 @@ const HomePage = ({ content }) => {
   return (
     <>
       <Header content={content} />
+      <div className="flex-grow-1">
+        body
+      </div>
+      <Footer content={content} />
     </>
   );
 };

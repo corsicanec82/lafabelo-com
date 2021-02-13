@@ -6,7 +6,9 @@ import Socials from './Socials.jsx';
 import Cart from './Cart.jsx';
 
 const Header = ({ content }) => (
-  <header id="header" className="fixed-top">
+  // NOTE fixed-top not needed
+  // <header id="header" className="fixed-top">
+  <header id="header">
     <div className="container d-flex align-items-center">
       <Logo />
       <Menu data={content.menu} />

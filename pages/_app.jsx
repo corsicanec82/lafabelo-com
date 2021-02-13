@@ -7,8 +7,12 @@ import '../styles/google/poppins.css';
 import '../styles/remixicon/remixicon.css';
 import '../styles/boxicons/css/boxicons.css';
 
+import Container from '../components/Container.jsx';
+
 const App = ({ Component, pageProps }) => (
-  <Component {...pageProps} />
+  <Container>
+    <Component {...pageProps} />
+  </Container>
 );
 
 export default App;
