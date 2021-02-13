@@ -7,6 +7,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-18.04
+    env:
+      PRISMIC_API_TOKEN: ${{ secrets.PRISMIC_API_TOKEN }}
+      PRISMIC_REPOSITORY_NAME: ${{ secrets.PRISMIC_REPOSITORY_NAME }}
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js
