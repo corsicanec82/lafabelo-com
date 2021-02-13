@@ -1,13 +1,13 @@
 import Copyright from './Copyright.jsx';
+import Company from './Company.jsx';
 
 const Footer = ({ content }) => (
   <footer id="footer">
     <div className="footer-top">
       <div className="container">
         <div className="row">
-          ss
-          {/* <Company content={data.company} />
-          <LinksList className="col-lg-2 col-md-6 footer-links" listName={data.useful_links_text} list={data.useful_links} />
+          <Company data={content.company} />
+          {/* <LinksList className="col-lg-2 col-md-6 footer-links" listName={data.useful_links_text} list={data.useful_links} />
           <LinksList className="col-lg-3 col-md-6 footer-links" listName={data.our_products_text} list={data.our_products} />
           <Subscribe data={data.subscribe} /> */}
         </div>

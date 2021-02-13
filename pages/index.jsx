@@ -25,6 +25,7 @@ export const getStaticProps = async ({ locale }) => {
   const menu = await client.getSingle('menu', { lang: locale });
   const socials = await client.getSingle('socials', { lang: locale });
   const copyright = await client.getSingle('copyright', { lang: locale });
+  const company = await client.getSingle('company', { lang: locale });
 
   return {
     props: {
@@ -32,6 +33,7 @@ export const getStaticProps = async ({ locale }) => {
         menu: getData(menu),
         socials: getData(socials),
         copyright: getData(copyright),
+        company: getData(company),
       },
     },
   };
