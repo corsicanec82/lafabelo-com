@@ -3,4 +3,9 @@ module.exports = {
     locales: ['ru', 'ua', 'de'],
     defaultLocale: 'de',
   },
+  images: {
+    domains: [
+      'images.prismic.io',
+    ],
+  },
 };
