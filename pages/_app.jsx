@@ -12,6 +12,7 @@ import { useEffect } from 'react';
 import aos from 'aos';
 
 import Container from '../components/Container.jsx';
+import BackToTopButton from '../components/BackToTopButton.jsx';
 
 const App = ({ Component, pageProps }) => {
   useEffect(() => {
@@ -21,6 +22,7 @@ const App = ({ Component, pageProps }) => {
   return (
     <Container>
       <Component {...pageProps} />
+      <BackToTopButton />
     </Container>
   );
 };
