@@ -7,12 +7,14 @@ import Header from '../components/Header/Header.jsx';
 import Footer from '../components/Footer/Footer.jsx';
 import Content from '../components/Content';
 import ContentList from '../components/About/ContentList.jsx';
+import BreadCrumbs from '../components/BreadCrumbs.jsx';
 
 const AboutPage = ({ data }) => (
   <>
     <SEO page={data.page} />
     <Header data={data} />
     <Content>
+      <BreadCrumbs title={data.page.title} breadcrumbs={getSlice(data.page, 'bread_crumbs')} />
       <ContentList content={getSlice(data.page, 'content')} />
     </Content>
     <Footer data={data} />
