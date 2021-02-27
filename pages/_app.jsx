@@ -14,7 +14,7 @@ import Head from 'next/head';
 
 import Container from '../components/Container.jsx';
 import BackToTopButton from '../components/BackToTopButton.jsx';
-import loadSnipcart from '../lib/snipcart.js';
+import { loadSnipcart } from '../lib/snipcart.js';
 
 const App = ({ Component, pageProps }) => {
   useEffect(() => {

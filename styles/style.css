@@ -390,7 +390,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 
-.header-cart .snipcart-total-price {
+.header-cart .cart-total-price {
   display: inline-block;
   margin-left: 5px;
 }
@@ -402,7 +402,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 429px) {
-  .header-cart .snipcart-total-price {
+  .header-cart .cart-total-price {
     display: none;
   }
 }
