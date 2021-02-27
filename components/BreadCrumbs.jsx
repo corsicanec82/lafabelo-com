@@ -20,6 +20,7 @@ const BreadCrumbs = ({ title, breadcrumbs }) => {
                 <LinkTo href={RichText.asText(link)}>{RichText.asText(name)}</LinkTo>
               </li>
             ))}
+            <li>{RichText.asText(title)}</li>
           </ol>
         </div>
 
