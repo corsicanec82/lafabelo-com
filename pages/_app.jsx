@@ -15,12 +15,15 @@ import Head from 'next/head';
 import Container from '../components/Container.jsx';
 import BackToTopButton from '../components/BackToTopButton.jsx';
 import { loadSnipcart } from '../lib/snipcart.js';
+import { isResponseSuccess } from '../lib/utils.js';
 
 const App = ({ Component, pageProps }) => {
-  useEffect(() => {
-    aos.init({ duration: 700 });
-    loadSnipcart();
-  }, []);
+  if (isResponseSuccess(pageProps)) {
+    useEffect(() => {
+      aos.init({ duration: 700 });
+      loadSnipcart();
+    }, []);
+  }
 
   return (
     <>
