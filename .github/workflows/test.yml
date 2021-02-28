@@ -1,0 +1,12 @@
+name: test
+
+on:
+  - deployment
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: Test
+        run: echo "Test"
