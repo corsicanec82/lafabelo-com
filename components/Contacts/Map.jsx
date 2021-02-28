@@ -1,11 +1,9 @@
 import { RichText } from 'prismic-reactjs';
 
-const Map = ({ content }) => {
-  if (!content) {
+const Map = ({ data }) => {
+  if (!data) {
     return null;
   }
-
-  const [data] = content.items;
 
   return (
     <div className="map-section">

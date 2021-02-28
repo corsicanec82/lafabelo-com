@@ -1,5 +1,5 @@
 import { getClient } from '../lib/cms/api.js';
-import { getData, getSlice } from '../lib/cms/utils.js';
+import { getData, getSliceItems } from '../lib/cms/utils.js';
 import { queryBaseData } from '../lib/cms/queries.js';
 
 import SEO from '../components/SEO.jsx';
@@ -14,8 +14,8 @@ const AboutPage = ({ data }) => (
     <SEO page={data.page} />
     <Header data={data} />
     <Content>
-      <BreadCrumbs title={data.page.title} breadcrumbs={getSlice(data.page, 'bread_crumbs')} />
-      <ContentList content={getSlice(data.page, 'content')} />
+      <BreadCrumbs title={data.page.title} items={getSliceItems(data.page, 'bread_crumbs')} />
+      <ContentList blocks={getSliceItems(data.page, 'content')} />
     </Content>
     <Footer data={data} />
   </>

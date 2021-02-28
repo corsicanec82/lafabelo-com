@@ -1,11 +1,9 @@
 import { RichText } from 'prismic-reactjs';
 
-const FeedbackForm = ({ content }) => {
-  if (!content) {
+const FeedbackForm = ({ data }) => {
+  if (!data) {
     return null;
   }
-
-  const [data] = content.items;
 
   return (
     <div className="row mt-5 justify-content-center" data-aos="fade-up">

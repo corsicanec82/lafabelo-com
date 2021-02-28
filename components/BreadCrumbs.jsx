@@ -1,12 +1,10 @@
 import { RichText } from 'prismic-reactjs';
 import LinkTo from './LinkTo.jsx';
 
-const BreadCrumbs = ({ title, breadcrumbs }) => {
-  if (!breadcrumbs) {
+const BreadCrumbs = ({ title, items }) => {
+  if (!items) {
     return null;
   }
-
-  const { items } = breadcrumbs;
 
   return (
     <section id="breadcrumbs" className="breadcrumbs">

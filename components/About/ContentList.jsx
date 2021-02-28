@@ -2,14 +2,12 @@ import { RichText } from 'prismic-reactjs';
 import cn from 'classnames';
 import Image from 'next/image';
 
-const ContentList = ({ content }) => {
-  if (!content) {
+const ContentList = ({ blocks }) => {
+  if (!blocks) {
     return null;
   }
 
-  const { items } = content;
-
-  return items.map((item, i) => {
+  return blocks.map((item, i) => {
     const imageUrl = `${item.image.url}`;
     const key = `item-${i}`;
     const even = i % 2 === 0;

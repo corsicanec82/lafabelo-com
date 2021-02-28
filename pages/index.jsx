@@ -1,5 +1,5 @@
 import { getClient } from '../lib/cms/api.js';
-import { getData, getSlice } from '../lib/cms/utils.js';
+import { getData, getSliceItems } from '../lib/cms/utils.js';
 import { queryBaseData } from '../lib/cms/queries.js';
 
 import SEO from '../components/SEO.jsx';
@@ -13,7 +13,7 @@ const HomePage = ({ data }) => (
     <SEO page={data.page} />
     <Header data={data} />
     <Content>
-      <Carousel items={getSlice(data.page, 'carousel').items} />
+      <Carousel items={getSliceItems(data.page, 'carousel')} />
     </Content>
     <Footer data={data} />
   </>

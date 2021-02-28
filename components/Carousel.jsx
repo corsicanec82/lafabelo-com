@@ -5,6 +5,10 @@ import cn from 'classnames';
 import CarouselContent from './CarouselContent';
 
 const Carousel = ({ items }) => {
+  if (!items) {
+    return null;
+  }
+
   const slides = items.map((item, id) => ({ id, ...item }));
 
   const [index, setIndex] = useState(0);

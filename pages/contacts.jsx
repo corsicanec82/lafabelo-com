@@ -1,5 +1,5 @@
 import { getClient } from '../lib/cms/api.js';
-import { getData, getSlice } from '../lib/cms/utils.js';
+import { getData, getSliceItems, getSliceData } from '../lib/cms/utils.js';
 import { queryBaseData } from '../lib/cms/queries.js';
 
 import SEO from '../components/SEO.jsx';
@@ -16,13 +16,13 @@ const ContactsPage = ({ data }) => (
     <SEO page={data.page} />
     <Header data={data} />
     <Content>
-      <BreadCrumbs title={data.page.title} breadcrumbs={getSlice(data.page, 'bread_crumbs')} />
-      <Map content={getSlice(data.page, 'map')} />
+      <BreadCrumbs title={data.page.title} items={getSliceItems(data.page, 'bread_crumbs')} />
+      <Map data={getSliceData(data.page, 'map')} />
 
       <section id="contact" className="contact">
         <div className="container">
-          <CompaniesList companies={getSlice(data.page, 'companies').items} />
-          <FeedbackForm content={getSlice(data.page, 'feedback_form')} />
+          <CompaniesList companies={getSliceItems(data.page, 'companies')} />
+          <FeedbackForm data={getSliceData(data.page, 'feedback_form')} />
         </div>
       </section>
 
