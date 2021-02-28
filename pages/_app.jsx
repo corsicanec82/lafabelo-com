@@ -16,7 +16,7 @@ import { useRouter } from 'next/router';
 import Container from '../components/Container.jsx';
 import BackToTopButton from '../components/BackToTopButton.jsx';
 import { loadSnipcart } from '../lib/snipcart.js';
-import { isResponseFailed, changeLocale } from '../lib/utils.js';
+import { isResponseFailed, changeLocale, isProduction } from '../lib/utils.js';
 
 const App = ({ Component, pageProps }) => {
   const { locale: currentLocale } = useRouter();
@@ -36,6 +36,7 @@ const App = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
+        {isProduction() && <script src="./rollbar.js" />}
         <link rel="stylesheet" href="/snipcart.css" />
       </Head>
       <Container>
