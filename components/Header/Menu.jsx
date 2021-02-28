@@ -2,7 +2,7 @@ import _ from 'lodash';
 import { useRouter } from 'next/router';
 import path from 'path';
 
-import { getMenuItems } from '../../lib/utils.js';
+import { getMenuItems } from '../../lib/cms/utils.js';
 import LinkTo from '../LinkTo.jsx';
 
 const Item = ({ name, link, items }) => {

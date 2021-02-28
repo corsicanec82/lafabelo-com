@@ -1,6 +1,6 @@
-import { getClient } from '../lib/api.js';
-import { getData, getSlice } from '../lib/utils.js';
-import { queryBaseData } from '../lib/queries.js';
+import { getClient } from '../lib/cms/api.js';
+import { getData, getSlice } from '../lib/cms/utils.js';
+import { queryBaseData } from '../lib/cms/queries.js';
 
 import SEO from '../components/SEO.jsx';
 import Header from '../components/Header/Header.jsx';

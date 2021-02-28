@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import { getSocialsItems } from '../../lib/utils.js';
+import { getSocialsItems } from '../../lib/cms/utils.js';
 
 const Socials = ({ data }) => {
   if (_.isNull(data)) {
