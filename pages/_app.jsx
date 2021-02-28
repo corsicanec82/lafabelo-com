@@ -8,22 +8,30 @@ import '../styles/boxicons/css/boxicons.css';
 import 'aos/dist/aos.css';
 import '../styles/style.css';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import aos from 'aos';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 import Container from '../components/Container.jsx';
 import BackToTopButton from '../components/BackToTopButton.jsx';
 import { loadSnipcart } from '../lib/snipcart.js';
-import { isResponseSuccess } from '../lib/utils.js';
+import { isResponseFailed, changeLocale } from '../lib/utils.js';
 
 const App = ({ Component, pageProps }) => {
-  if (isResponseSuccess(pageProps)) {
-    useEffect(() => {
+  const { locale: currentLocale } = useRouter();
+  const previousLocale = useRef(currentLocale);
+
+  useEffect(() => {
+    if (!isResponseFailed(pageProps)) {
       aos.init({ duration: 700 });
       loadSnipcart();
-    }, []);
-  }
+    }
+  }, []);
+
+  useEffect(() => {
+    changeLocale(previousLocale, currentLocale);
+  });
 
   return (
     <>

@@ -1,20 +1,24 @@
-import path from 'path';
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
+
+import LinkTo from '../LinkTo.jsx';
 
 const SelectLanguage = () => {
   const router = useRouter();
   const { locales, locale: currentLocale, pathname } = router;
 
-  const changeLocale = (locale) => (e) => {
-    e.preventDefault();
-    Cookies.set('NEXT_LOCALE', locale);
-    router.push(pathname, pathname, { locale });
-
-    // change language for snipcart
-    const { Snipcart } = window;
-    Snipcart.api.session.setLanguage(locale);
+  const changeLocale = (locale) => () => {
+    if (locale !== currentLocale) {
+      Cookies.set('NEXT_LOCALE', locale);
+    }
   };
+
+  if (!Cookies.get('NEXT_LOCALE')) {
+    Cookies.set('NEXT_LOCALE', currentLocale);
+  }
 
   return (
     <nav className="nav-menu header-langs">
@@ -23,13 +27,13 @@ const SelectLanguage = () => {
           <span>{currentLocale.toUpperCase()}</span>
           <ul>
             {locales.map((locale) => (
-              <li key={locale}>
-                <a
-                  href={path.join(pathname, locale)}
-                  onClick={changeLocale(locale)}
+              <li key={locale} onClick={changeLocale(locale)}>
+                <LinkTo
+                  href={pathname}
+                  locale={locale}
                 >
                   {locale.toUpperCase()}
-                </a>
+                </LinkTo>
               </li>
             ))}
           </ul>
