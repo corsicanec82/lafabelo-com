@@ -1,5 +1,5 @@
 # La Fabelo
-*Website source lafabelo.com*
+*Source of the new website project lafabelo.com*
 
 The app was built with Next.js, Bootstrap, React.
 
